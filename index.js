@@ -19,8 +19,8 @@ app.use(
 );
 
 // tell passport to use cookies to handle authentication
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize()); // initialize passport authentication module
+app.use(passport.session()); // alter the req obj, change the 'user' from cookie to the deserialized user object
 
 require('./routes/authRoutes')(app);
 
