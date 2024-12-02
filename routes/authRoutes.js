@@ -12,14 +12,14 @@ module.exports = (app) => {
     '/auth/google/callback',
     passport.authenticate('google', { failureRedirect: '/' }),
     (req, res) => {
-      res.redirect('/');
+      res.redirect('/surveys');
     }
   );
 
   app.get('/api/logout', (req, res) => {
     // logout function automatically added by passportjs
     req.logout();
-    res.send({ message: 'You are now logged out.' });
+    res.redirect('/');
   });
 
   app.get('/api/current_user', (req, res) => {

@@ -1,0 +1,22 @@
+REDUX - state management library specifically designed for React applications.
+ACTION CREATOR - the purpose of an action creator is to return an action,
+      that will be sent to all the different reducers inside of our application
+      , which then produce new value for state and updates that state inside of our Redux Store
+ACTION - are plain JavaScript objects that describe what happened in the application.
+      They are the only way to change the state in Redux.
+      Each action must have a type property and can optionally include a payload
+REDUCERS - are pure functions that take the current state and an action as arguments and return a new state.
+      They specify how the state should change in response to an action
+STORE - The store is the central repository that holds the state of the entire application.
+      It acts as a single source of truth, making it easier to manage and maintain the state.
+REDUX THUNK - allow us to create action creators that break the rules of regular redux.
+      Specifically, it breaks the rule that we need to immediately return an action from every action creator we create.
+
+Advantages of React Redux
+
+1. Centralized State Management: The state is stored globally in the store, making it accessible to all
+      components and simplifying state management
+2. Performance Optimization: React Redux helps in improving performance by preventing unnecessary re-renders
+3. Pure Reducer Functions: Reducers are pure functions, ensuring consistent and predictable state updates
+4. Long-term Data Storage: Redux is suitable for storing long-term data that persists until the page is refreshed
+5. Supportive Community: Redux has a large community, making it easier to learn best practices and get help when needed
